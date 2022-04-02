@@ -24,10 +24,13 @@ build: ## Builds the Docker images
 up: ## Start the docker hub in detached mode (no logs)
 	@$(DOCKER_COMP) up --detach
 
-start: build up ## Build and start the containers
+start: build up create-schema ## Build and start the containers
 
 down: ## Stop the docker hub
 	@$(DOCKER_COMP) down --remove-orphans
+
+create-schema:
+	@$(SYMFONY) doctrine:schema:create
 
 test:
 	@$(PHP_CONT) vendor/bin/phpunit
