@@ -29,6 +29,9 @@ start: build up ## Build and start the containers
 down: ## Stop the docker hub
 	@$(DOCKER_COMP) down --remove-orphans
 
+test:
+	@$(PHP_CONT) vendor/bin/phpunit
+
 logs: ## Show live logs
 	@$(DOCKER_COMP) logs --tail=0 --follow
 
