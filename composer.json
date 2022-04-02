@@ -18,7 +18,8 @@
         "symfony/framework-bundle": "6.0.*",
         "symfony/proxy-manager-bridge": "6.0.*",
         "symfony/runtime": "6.0.*",
-        "symfony/yaml": "6.0.*"
+        "symfony/yaml": "6.0.*",
+        "thecodingmachine/safe": "^2.1"
     },
     "config": {
         "allow-plugins": {
@@ -71,5 +72,10 @@
             "require": "6.0.*",
             "docker": true
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "symfony/http-client": "6.0.*",
+        "symfony/phpunit-bridge": "^6.0"
     }
 }
